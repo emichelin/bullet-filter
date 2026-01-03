@@ -18,6 +18,7 @@
 
 <!-- Copiez ce bloc juste avant la fermeture </body> -->
 
+<script src="https://votre-site.com/bullet/modal-data.js"></script>
 <script src="https://votre-site.com/bullet/bullet-data.js"></script>
 <script src="https://votre-site.com/bullet/bullet-config.js"></script>
 <script src="https://votre-site.com/bullet/bullet-bus.js"></script>
@@ -38,6 +39,7 @@
 <link rel="stylesheet" href="/chemin/vers/bullet/bullet-style.css">
 
 <!-- Avant </body> -->
+<script src="/chemin/vers/bullet/modal-data.js"></script>
 <script src="/chemin/vers/bullet/bullet-data.js"></script>
 <script src="/chemin/vers/bullet/bullet-config.js"></script>
 <script src="/chemin/vers/bullet/bullet-bus.js"></script>
@@ -58,6 +60,7 @@
 <link rel="stylesheet" href="https://votre-site.com/bullet/bullet-style.css">
 
 <!-- Avant </body> -->
+<script src="https://votre-site.com/bullet/modal-data.js"></script>
 <script src="https://votre-site.com/bullet/bullet-data.js"></script>
 <script src="https://votre-site.com/bullet/bullet-config.js"></script>
 <script src="https://votre-site.com/bullet/bullet-bus.js"></script>
@@ -74,15 +77,16 @@
 <!-- ORDRE D'IMPORTATION (IMPORTANT !) -->
 <!--
   L'ordre des scripts est crucial. Respectez cette séquence :
-  
-  1. bullet-data.js      - Données de référence
-  2. bullet-config.js    - Configuration globale
-  3. bullet-bus.js       - Event bus
-  4. bullet-params.js    - Gestion des paramètres
-  5. bullet-modal.js     - Interface modal
-  6. bullet-filter.js    - Logique de filtrage
-  7. bullet-toc.js       - Table des matières (optionnel)
-  8. bullet-app.js       - Initialisation (TOUJOURS EN DERNIER)
+
+  1. modal-data.js       - Données du modal (REQUIS EN PREMIER)
+  2. bullet-data.js      - Logique du modal
+  3. bullet-config.js    - Configuration globale
+  4. bullet-bus.js       - Event bus
+  5. bullet-params.js    - Gestion des paramètres
+  6. bullet-modal.js     - Interface modal
+  7. bullet-filter.js    - Logique de filtrage
+  8. bullet-toc.js       - Table des matières (optionnel)
+  9. bullet-app.js       - Initialisation (TOUJOURS EN DERNIER)
 -->
 
 
@@ -155,6 +159,7 @@
   </details>
   
   <!-- Bullet Filter JavaScript -->
+  <script src="https://votre-site.com/bullet/modal-data.js"></script>
   <script src="https://votre-site.com/bullet/bullet-data.js"></script>
   <script src="https://votre-site.com/bullet/bullet-config.js"></script>
   <script src="https://votre-site.com/bullet/bullet-bus.js"></script>
