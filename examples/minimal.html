@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bullet Filter - Version minimale</title>
+  
+  <!-- Bullet Filter CSS -->
+  <link rel="stylesheet" href="../dist/bullet-style.css">
+  
+  <style>
+    body {
+      max-width: 800px;
+      margin: 80px auto 20px;
+      padding: 20px;
+      font-family: system-ui, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Version minimale</h1>
+  
+  <p>Cette version inclut uniquement les modules essentiels (sans TOC).</p>
+
+  <details>
+    <summary>
+      Test filtre model
+      <mark class="highlight-gray">model:TEST</mark>
+    </summary>
+    <p>Contenu filtré</p>
+  </details>
+
+  <!-- Scripts essentiels uniquement -->
+  <script src="../dist/bullet-data.js"></script>
+  <script src="../dist/bullet-config.js"></script>
+  <script src="../dist/bullet-bus.js"></script>
+  <script src="../dist/bullet-params.js"></script>
+  <script src="../dist/bullet-modal.js"></script>
+  <script src="../dist/bullet-filter.js"></script>
+  <script src="../dist/bullet-app.js"></script>
+</body>
+</html>

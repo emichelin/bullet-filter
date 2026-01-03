@@ -1,0 +1,39 @@
+{
+  "name": "bullet-filter",
+  "version": "1.0.0",
+  "description": "Système de filtrage dynamique et intelligent pour vos exports HTML Notion",
+  "main": "dist/bullet-app.js",
+  "scripts": {
+    "serve": "python -m http.server 8000",
+    "test": "echo \"Ouvrez examples/integration.html dans votre navigateur\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/votre-username/bullet-filter.git"
+  },
+  "keywords": [
+    "notion",
+    "filter",
+    "javascript",
+    "html",
+    "dynamic",
+    "navbar",
+    "toc",
+    "table-of-contents",
+    "filtering",
+    "vanilla-js"
+  ],
+  "author": "Votre Nom",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/votre-username/bullet-filter/issues"
+  },
+  "homepage": "https://github.com/votre-username/bullet-filter#readme",
+  "files": [
+    "dist/",
+    "examples/",
+    "INTEGRATION.html",
+    "README.md",
+    "LICENSE"
+  ]
+}

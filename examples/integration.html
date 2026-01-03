@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bullet Filter - Exemple d'intégration complète</title>
+  
+  <!-- Bullet Filter CSS -->
+  <link rel="stylesheet" href="../dist/bullet-style.css">
+  
+  <!-- Styles personnalisés (optionnel) -->
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    h1 { color: #3B5179; }
+    
+    .demo-content {
+      margin-top: 100px; /* Laisser de l'espace pour la navbar */
+    }
+    
+    .demo-section {
+      margin-bottom: 40px;
+      padding: 20px;
+      background: #f9fafb;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-content">
+    <h1>🎯 Bullet Filter - Démonstration</h1>
+    
+    <p>
+      Bienvenue dans la démonstration de <strong>Bullet Filter</strong>. 
+      Cette page montre comment intégrer le système de filtrage dans votre HTML.
+    </p>
+
+    <div class="demo-section">
+      <h2>📋 Installation</h2>
+      <p>Pour intégrer Bullet Filter sur votre site, ajoutez ces lignes dans votre HTML :</p>
+      
+      <h3>Dans le &lt;head&gt; :</h3>
+      <pre><code>&lt;link rel="stylesheet" href="https://votre-site.com/bullet/bullet-style.css"&gt;</code></pre>
+      
+      <h3>Avant la fermeture du &lt;/body&gt; :</h3>
+      <pre><code>&lt;script src="https://votre-site.com/bullet/bullet-data.js"&gt;&lt;/script&gt;
+&lt;script src="https://votre-site.com/bullet/bullet-config.js"&gt;&lt;/script&gt;
+&lt;script src="https://votre-site.com/bullet/bullet-bus.js"&gt;&lt;/script&gt;
+&lt;script src="https://votre-site.com/bullet/bullet-params.js"&gt;&lt;/script&gt;
+&lt;script src="https://votre-site.com/bullet/bullet-modal.js"&gt;&lt;/script&gt;
+&lt;script src="https://votre-site.com/bullet/bullet-filter.js"&gt;&lt;/script&gt;
+&lt;script src="https://votre-site.com/bullet/bullet-toc.js"&gt;&lt;/script&gt;
+&lt;script src="https://votre-site.com/bullet/bullet-app.js"&gt;&lt;/script&gt;</code></pre>
+    </div>
+
+    <div class="demo-section">
+      <h2>🎨 Exemple avec filtres</h2>
+      
+      <details>
+        <summary>
+          Section filtrée par modèle
+          <mark class="highlight-gray">model:ABC123</mark>
+        </summary>
+        <p>Ce contenu ne s'affiche que si le modèle "ABC123" est sélectionné.</p>
+      </details>
+
+      <details>
+        <summary>
+          Section filtrée par module
+          <mark class="highlight-gray">module:M1,M2</mark>
+        </summary>
+        <p>Ce contenu ne s'affiche que si les modules "M1" ou "M2" sont sélectionnés.</p>
+      </details>
+
+      <details>
+        <summary>
+          Section multi-filtres
+          <mark class="highlight-gray">model:XYZ789</mark>
+          <mark class="highlight-gray">sensor:S1</mark>
+        </summary>
+        <p>Ce contenu nécessite à la fois le modèle "XYZ789" ET le capteur "S1".</p>
+      </details>
+    </div>
+
+    <div class="demo-section">
+      <h2>🔗 Paramètres URL</h2>
+      <p>Essayez ces URLs pour voir le filtrage en action :</p>
+      <ul>
+        <li><a href="?model=ABC123">?model=ABC123</a> - Afficher uniquement le modèle ABC123</li>
+        <li><a href="?module=M1,M2">?module=M1,M2</a> - Afficher les modules M1 et M2</li>
+        <li><a href="?model=XYZ789&sensor=S1">?model=XYZ789&sensor=S1</a> - Filtres multiples</li>
+        <li><a href="?cond=true&img=false">?cond=true&img=false</a> - Activer conditions, masquer images</li>
+      </ul>
+    </div>
+
+    <div class="demo-section">
+      <h2>⚙️ Utilisation</h2>
+      <ol>
+        <li>Cliquez sur l'icône <strong>⚙️</strong> dans la navbar en haut de la page</li>
+        <li>Sélectionnez vos filtres dans le modal</li>
+        <li>Les paramètres sont automatiquement sauvegardés dans l'URL et le sessionStorage</li>
+        <li>Naviguez entre les pages : vos filtres sont conservés</li>
+      </ol>
+    </div>
+
+    <div class="demo-section">
+      <h2>📑 Table des matières</h2>
+      <p>
+        Une table des matières dynamique apparaît automatiquement sur le côté gauche.
+        Elle détecte tous les titres de votre page et permet une navigation fluide.
+      </p>
+    </div>
+  </div>
+
+  <!-- Bullet Filter JavaScript -->
+  <script src="../dist/bullet-data.js"></script>
+  <script src="../dist/bullet-config.js"></script>
+  <script src="../dist/bullet-bus.js"></script>
+  <script src="../dist/bullet-params.js"></script>
+  <script src="../dist/bullet-modal.js"></script>
+  <script src="../dist/bullet-filter.js"></script>
+  <script src="../dist/bullet-toc.js"></script>
+  <script src="../dist/bullet-app.js"></script>
+</body>
+</html>

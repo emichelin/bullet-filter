@@ -1,0 +1,185 @@
+<!-- 
+  ====================================================================
+  BULLET FILTER - Script d'intégration
+  ====================================================================
+  
+  Copiez-collez ce code dans votre HTML pour activer Bullet Filter.
+  
+  Option 1 : Hébergement CDN (remplacez "votre-site.com" par votre domaine)
+  Option 2 : Hébergement local (adaptez les chemins selon votre structure)
+  
+  ====================================================================
+-->
+
+<!-- OPTION 1 : HÉBERGEMENT CDN -->
+<!-- Copiez ce bloc dans le <head> de votre HTML -->
+
+<link rel="stylesheet" href="https://votre-site.com/bullet/bullet-style.css">
+
+<!-- Copiez ce bloc juste avant la fermeture </body> -->
+
+<script src="https://votre-site.com/bullet/bullet-data.js"></script>
+<script src="https://votre-site.com/bullet/bullet-config.js"></script>
+<script src="https://votre-site.com/bullet/bullet-bus.js"></script>
+<script src="https://votre-site.com/bullet/bullet-params.js"></script>
+<script src="https://votre-site.com/bullet/bullet-modal.js"></script>
+<script src="https://votre-site.com/bullet/bullet-filter.js"></script>
+<script src="https://votre-site.com/bullet/bullet-toc.js"></script>
+<script src="https://votre-site.com/bullet/bullet-app.js"></script>
+
+
+<!-- ================================================================ -->
+
+
+<!-- OPTION 2 : HÉBERGEMENT LOCAL -->
+<!-- Si vous hébergez les fichiers sur votre propre serveur -->
+
+<!-- Dans le <head> -->
+<link rel="stylesheet" href="/chemin/vers/bullet/bullet-style.css">
+
+<!-- Avant </body> -->
+<script src="/chemin/vers/bullet/bullet-data.js"></script>
+<script src="/chemin/vers/bullet/bullet-config.js"></script>
+<script src="/chemin/vers/bullet/bullet-bus.js"></script>
+<script src="/chemin/vers/bullet/bullet-params.js"></script>
+<script src="/chemin/vers/bullet/bullet-modal.js"></script>
+<script src="/chemin/vers/bullet/bullet-filter.js"></script>
+<script src="/chemin/vers/bullet/bullet-toc.js"></script>
+<script src="/chemin/vers/bullet/bullet-app.js"></script>
+
+
+<!-- ================================================================ -->
+
+
+<!-- OPTION 3 : VERSION MINIMALE (sans Table des matières) -->
+<!-- Si vous n'avez pas besoin de la TOC -->
+
+<!-- Dans le <head> -->
+<link rel="stylesheet" href="https://votre-site.com/bullet/bullet-style.css">
+
+<!-- Avant </body> -->
+<script src="https://votre-site.com/bullet/bullet-data.js"></script>
+<script src="https://votre-site.com/bullet/bullet-config.js"></script>
+<script src="https://votre-site.com/bullet/bullet-bus.js"></script>
+<script src="https://votre-site.com/bullet/bullet-params.js"></script>
+<script src="https://votre-site.com/bullet/bullet-modal.js"></script>
+<script src="https://votre-site.com/bullet/bullet-filter.js"></script>
+<script src="https://votre-site.com/bullet/bullet-app.js"></script>
+<!-- Note : bullet-toc.js est omis -->
+
+
+<!-- ================================================================ -->
+
+
+<!-- ORDRE D'IMPORTATION (IMPORTANT !) -->
+<!--
+  L'ordre des scripts est crucial. Respectez cette séquence :
+  
+  1. bullet-data.js      - Données de référence
+  2. bullet-config.js    - Configuration globale
+  3. bullet-bus.js       - Event bus
+  4. bullet-params.js    - Gestion des paramètres
+  5. bullet-modal.js     - Interface modal
+  6. bullet-filter.js    - Logique de filtrage
+  7. bullet-toc.js       - Table des matières (optionnel)
+  8. bullet-app.js       - Initialisation (TOUJOURS EN DERNIER)
+-->
+
+
+<!-- ================================================================ -->
+
+
+<!-- PERSONNALISATION DES STYLES -->
+<!-- Ajoutez vos styles personnalisés APRÈS bullet-style.css -->
+
+<link rel="stylesheet" href="https://votre-site.com/bullet/bullet-style.css">
+<style>
+  /* Personnaliser la navbar */
+  .bullet-navbar {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  
+  /* Personnaliser la table des matières */
+  .dynamic-toc {
+    background: rgba(255, 255, 255, 0.98);
+    border-left: 3px solid #667eea;
+  }
+  
+  /* Personnaliser les boutons */
+  .modal-btn-primary {
+    background: #667eea;
+  }
+  
+  .modal-btn-primary:hover {
+    background: #5568d3;
+  }
+</style>
+
+
+<!-- ================================================================ -->
+
+
+<!-- EXEMPLE COMPLET D'INTÉGRATION -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ma page avec Bullet Filter</title>
+  
+  <!-- Bullet Filter CSS -->
+  <link rel="stylesheet" href="https://votre-site.com/bullet/bullet-style.css">
+  
+  <!-- Vos styles personnalisés -->
+  <style>
+    body {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      padding-top: 80px; /* Espace pour la navbar */
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Votre contenu HTML Notion ici -->
+  <h1>Mon titre</h1>
+  
+  <details>
+    <summary>
+      Section filtrée
+      <mark class="highlight-gray">model:ABC123</mark>
+    </summary>
+    <p>Contenu qui ne s'affiche que si model=ABC123</p>
+  </details>
+  
+  <!-- Bullet Filter JavaScript -->
+  <script src="https://votre-site.com/bullet/bullet-data.js"></script>
+  <script src="https://votre-site.com/bullet/bullet-config.js"></script>
+  <script src="https://votre-site.com/bullet/bullet-bus.js"></script>
+  <script src="https://votre-site.com/bullet/bullet-params.js"></script>
+  <script src="https://votre-site.com/bullet/bullet-modal.js"></script>
+  <script src="https://votre-site.com/bullet/bullet-filter.js"></script>
+  <script src="https://votre-site.com/bullet/bullet-toc.js"></script>
+  <script src="https://votre-site.com/bullet/bullet-app.js"></script>
+</body>
+</html>
+
+
+<!-- ================================================================ -->
+
+
+<!-- DÉPANNAGE -->
+<!--
+  Si ça ne fonctionne pas :
+  
+  1. Vérifiez la console du navigateur (F12) pour les erreurs
+  2. Assurez-vous que TOUS les scripts sont chargés dans le bon ordre
+  3. Vérifiez que les chemins vers les fichiers sont corrects
+  4. bullet-app.js doit TOUJOURS être chargé en dernier
+  5. Le CSS doit être dans le <head>
+  6. Les scripts doivent être avant </body>
+  
+  Pour plus d'aide : https://github.com/votre-username/bullet-filter/issues
+-->
