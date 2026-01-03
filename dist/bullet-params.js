@@ -1,9 +1,6 @@
 (function(){
   const CFG = window.BulletConfig;
   const BUS = window.BulletBus;
-
-  if(!CFG || !BUS) throw new Error('BulletConfig / BulletBus missing');
-
   const KEYS = CFG.PARAM_KEYS;
   const PREFIX = CFG.STORAGE_PREFIX;
 
